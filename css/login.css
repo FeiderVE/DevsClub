@@ -1,0 +1,402 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Kanit', sans-serif;
+}
+:root {
+    --bg-ppal:#7bb31c;
+    --bg-navbar:#325e6d;
+    --second_color:#edc463;    
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-ppal);
+    border:var(--bg-navbar) solid 2px !important;
+    width: 100%;
+    padding: 20px 10px;
+    z-index: 5;
+    position: fixed;
+}
+.logo-header {
+    display: none;
+}
+.header_nav {
+    display: none;
+}
+.icon-list {
+    font-size: 40px;
+}
+.btn{
+    color: var(--bg-navbar) !important;
+}
+.btnDos{
+    background: var(--bg-navbar) !important;
+    color:var(--second_color);
+    font-size: 15px;
+    width: 80px;
+    height: 30px;
+    border-radius:200px;
+    border:var(--bg-navbar) solid;;
+}
+.dropdown-menu {
+    border:var(--bg-navbar) solid 2px !important;
+    background-color: var(--bg-ppal) !important;
+}
+.dropdown-item {
+    font-weight: 900;
+    font-size: 15px;
+}
+.header__iconoPerfil {
+    font-size: 40px;
+    color:var(--bg-navbar) ;
+}
+.main {
+    background: #edc463;
+}
+.main__container-logo {
+    padding-top: 140px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.logo {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    border: #325e6d solid 3px;
+    border-radius: 200px;
+    box-shadow: -3px 1px 33px 1px rgba(50,94,109,1);
+-webkit-box-shadow: -3px 1px 33px 1px rgba(50,94,109,1);
+-moz-box-shadow: -3px 1px 33px 1px rgba(50,94,109,1);
+}
+.main__title {
+    background: #7bb31c;
+    display: flex;
+    justify-content: center;
+    border: #325e6d solid 3px;
+    color:#325e6d;
+}
+.main__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: #325e6d solid 3px;
+    padding: 20px;
+}
+.form__login {
+    background: var(--bg-ppal);
+    border: #325e6d solid 1px;
+    border-radius: 10px;
+}
+.login__email,
+.login__password {
+    padding: 10px;
+}
+.form__label-email,
+.form__label-password {
+    color: #325e6d;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.form__container-email,
+.form__container-password {
+    display: flex;
+    flex-direction: row;
+}
+.input__email,
+.input__password {
+    border: #325e6d solid 2px;
+    border-radius: 10px;
+    width: 220px;
+}
+.form__icon {
+    margin-left: 10px;
+}
+.icon {
+    font-size: 20px;
+    color: #325e6d;
+}
+.container__password-recover {
+    padding: 10px;
+}
+.button {
+    background: #325e6d;
+    color:#edc463;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    width: 150px;
+    border:black solid 1px;
+    border-radius: 50px;
+}
+.form__container-socialNetworks {
+    background: #7bb31c;
+    border: #325e6d solid 1px;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sentence {
+    color: #325e6d;
+    font-size: 20px;
+    font-weight: 600;
+}
+.form__container-logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+}
+.logoGoogle,
+.logoFace {
+    color: #325e6d;
+    font-size: 25px;
+}
+@media(min-width:768px) {
+    .dropdown {
+        display: none;
+    }
+    .dropdownDos{
+        display: none;
+    }
+    .header {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        height: 100%;
+        width: 250px;
+        padding: 0;
+        position: fixed;
+        z-index: 5;
+    }
+    .container_logo {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .header_nav {
+        display:flex;
+        flex-direction: column;
+        align-content: space-around;
+        height: 80%;
+
+    }
+    .logo-header {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        border-radius: 200px;
+        border: var(--second_color) solid ;
+        margin-top: 12px;
+    }
+    .header__iconoPerfil {
+        text-decoration: none;
+        font-size: 50px;
+        color:var(--second_color);
+    }
+    .list {
+        list-style: none;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    .list_item {
+        overflow: hidden;    
+    }
+    .list_button,
+    .list_button_options{
+        margin: 1px;
+        cursor: pointer;
+    }
+    .nav_link,
+    .subnav_link {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 700;
+        color: #325e6d;
+        transition: 800ms;
+        cursor: pointer;
+    }
+    .sublist {
+        display: block;
+        list-style: none;
+        margin-left: 10px;
+        border-left: #325e6d solid 5px;
+        width: 80%;
+        transition: height .4s;
+        height: 0;
+        cursor: pointer;
+    }
+    .nav_link:hover {
+        color:black;
+        background: #f1d59475;
+        border-radius: 200px;  
+    }
+    .subnav_link:hover {
+        color:black;
+        background: #f1d59475;
+        border-radius: 200px; 
+    }
+    .arrow .list_arrow {
+        transform:rotate(90deg)   
+    }
+    .list_arrow {
+        transition:transform .3s
+    }
+    
+    .main {
+        padding-left: 250px;
+        height:100% ;
+    }
+    .main__container-logo {
+        padding: 50px;
+    }
+    .logo {
+        width: 250px;
+        height: 250px;
+    }
+    .main__title {
+        font-size: 40px;
+        border:none;
+        padding: 20px;
+    }
+    .main__form {
+        border: none;
+        padding: 40px;
+    }
+    .form__login {
+        border: #325e6d solid 2px;
+    }
+    .form__label-email,
+    .form__label-password {
+        font-size: 25px;
+    }
+    .input__email,
+    .input__password {
+        width: 300px;
+    }
+    .icon {
+        font-size: 25px;
+    }
+    .form__password-recover {
+        font-size: 20px;
+    }
+    .button {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 170px;
+        height: 50px;
+        transition: 800ms;
+    }
+    .button:hover{
+        background:#2c393e;
+    }
+   .form__container-socialNetworks {
+        border: #325e6d solid 2px;
+        margin-top: 30px;
+        padding: 15px;
+    }
+   .sentence {
+        font-size: 25px;
+    }
+    .logoGoogle,
+    .logoFace {
+       font-size: 30px;
+    }
+}
+@media(min-width:1024px) {
+    .nav_link,
+    .subnav_link {
+        font-size: 16px;
+    }
+    .sublist {
+        border-left: #325e6d solid 2px;
+    }
+    .main__container-logo {
+        display: none;
+    }
+    .main__title {
+        font-size: 60px;
+        border-bottom: #325e6d solid 4px;
+        padding: 20px;
+    }
+    .main__form {
+        border: none;
+        padding: 40px;
+    }
+    .form__login {
+        margin-top: 50px;
+        width: 600px;
+        height: 600px;
+        border: #325e6d solid 4px;
+    }
+    .form__label-email,
+    .form__label-password {
+        margin-top: 40px;
+        margin-left: 20px;
+        font-size: 30px;
+    }
+    .input__email,
+    .input__password {
+        margin-left: 20px;
+        width: 500px;
+        height: 70px;
+        padding: 10px;
+        font-size: 25px;
+    }
+    .form__icon{
+        padding-top: 10px;
+    }
+    .icon {
+        font-size: 30px;
+    }
+    .container__password-recover {
+        margin-top: 30px;
+    }
+    .form__password-recover {
+        margin-left: 20px;
+        font-size: 25px;
+    }
+    .button {
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-bottom: 0px;
+        width: 240px;
+        height: 70px;
+        font-size: 25px;
+    }
+   .form__container-socialNetworks {
+        border: #325e6d solid 4px;
+        height: 200px;
+        margin-top: 60px;
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+   .sentence {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    .logoGoogle,
+    .logoFace {
+       font-size: 50px;
+    }
+    
+}
