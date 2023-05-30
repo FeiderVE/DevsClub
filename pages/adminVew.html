@@ -10,6 +10,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/adminVew.css">
     <title>Admin</title>
 </head>
 <body>
@@ -17,7 +21,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Cheeta's Food</a>
-              <img src="../images/logo_header.png" style="width: 50px; object-fit: cover;" alt="Logotipo circular">
+              <img src="../images/logos/logo_header.png" style="width: 50px; object-fit: cover;" alt="Logotipo circular">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -42,9 +46,9 @@
                       Idiomas
                     </button>
                     <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><button>Español</button></li>
-                      <li><button>Inglés</button></li>
-                      <li><button>Portugués</button></li>
+                      <li><button class="headerNavbarLanguajeBtn">Español</button></li>
+                      <li><button class="headerNavbarLanguajeBtn">Inglés</button></li>
+                      <li><button class="headerNavbarLanguajeBtn">Portugués</button></li>
                     </ul>
                   </li>
                 </ul>
@@ -53,9 +57,12 @@
         </nav>
     </header>
     <main class="main">
-      <div class="contenedor">
+      <div class="contenedorForms">
+        <div class="contenedorImagen">
+          <img src="../images/adminVew/background-admin.vew-3.jpg" alt="main background" class="mainBackground">
+        </div>
           <!-- Añadir -->
-          <div class="añadir">
+        <div class="añadir">
               <h2>Añadir</h2>
               <form>
                   <label>Nombre del producto</label>
@@ -69,12 +76,13 @@
 
                   <label>Url Imagen</label>
                   <input type="text" id="ImagenAñadir">
-
+                  
                   <input class="button" type="button" id="botonAñadir" value="Añadir">
               </form>
-          </div>
+        </div>
+        
           <!-- Editar -->
-          <div class="editar">
+        <div class="editar">
               <h2>Editar</h2>
               <form>
                   <label>Nombre del producto</label>
@@ -92,10 +100,10 @@
 
                   <input class="button" type="button" id="botonEditar" value="Editar">
               </form>
-          </div>
+        </div>
 
           <!-- Eliminar -->
-          <div class="eliminar">
+        <div class="eliminar">
               <h2>Eliminar</h2>
               <form>
                   <label>Nombre del producto</label>
@@ -104,15 +112,13 @@
                   </select>
                   <input class="button" type="button" id="botonEliminar" value="Eliminar">
               </form>
-          </div>
+        </div>
       </div>
-      <!-- Mostrar el mensaje -->
       <div class="contenedorMensaje">
           <div id="mensaje"></div>
       </div>
-      <!-- Productos -->
       <div class="contenedorProductos">
-          <h2>Productos</h2>
+          <h2 class="titleProductos">Productos</h2>
           <div class="mostrarProductos" id="mostrarProductos"></div>
       </div>
     </main>

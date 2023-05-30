@@ -1,3 +1,25 @@
+let listMenu = document.querySelectorAll('.list_button_options');
+
+listMenu.forEach(foodElement => {
+    foodElement.addEventListener('click' , () => {
+        
+        foodElement.classList.toggle('arrow');
+
+        let height = 0;
+        let menu = foodElement.nextElementSibling;
+
+        if(menu.clientHeight == "0") {
+            height=menu.scrollHeight;
+        }
+
+        menu.style.height =`${height}px`
+    })
+}
+    )
+
+
+//-Register-//
+
 const registro = document.querySelector('#registro'); //reg
 const mail = document.querySelector('#mail-input'); //input mail
 const password = document.querySelector('#password-input');  //input contra
@@ -90,6 +112,7 @@ const mensajeError = (errores) => {
 const mostrarValidBootstrap = (element) => {
     element.classList.add("is-valid"); //clase bootstrap
     element.classList.remove("is-invalid");
+  
 }
 
 const mostrarInvalidBootstrap = (element) => {
@@ -101,6 +124,7 @@ btn_show.addEventListener("click", (e) => {
     if (password.type === "password") {
       password.type = "text";
       btn_show.textContent = "Ocultar";
+      btn_show.style.backgroundColor = "#edc463";
     } else {
       password.type = "password";
       btn_show.textContent = "Mostrar";
